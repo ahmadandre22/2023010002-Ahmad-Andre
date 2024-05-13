@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Diskon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input[type="number"] {
+      width: 200px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Diskon</h1>
+  <p>Masukkan total belanja Anda:</p>
+  <input type="number" id="totalBelanja" placeholder="Masukkan total belanja">
+  <button onclick="hitungDiskon()">Hitung Diskon</button>
+  <div id="result"></div>
+
+  <script>
+    function hitungDiskon() {
+      const totalBelanja = parseFloat(document.getElementById("totalBelanja").value);
+
+      let diskon = 0;
+      if (totalBelanja > 100000) {
+        diskon = 0.1; // 10% diskon
+      }
+
+      const totalBayar = totalBelanja - (totalBelanja * diskon);
+
+      document.getElementById("result").innerHTML = `Total Bayar: Rp ${totalBayar.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
