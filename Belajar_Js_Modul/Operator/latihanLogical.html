@@ -6,7 +6,7 @@
 <body>
     <script>
 
-let a = 20 
+/*let a = 20 
 let b = 25
 
 // AND Operator 
@@ -15,13 +15,107 @@ console.log (a > 25 && b >21 ) // false, karena nilai dari salah satunya berbeda
 
 // OR Operator 
 console.log (a < 30 || b > 30) // true, karena keduanya bernilai true
-console.log (a > 25 || b > 21 )// true
+console.log (a > 25 || b > 21 )// true, karena salah satu bernilai true
 
 //NOT
 console.log( !(a < 25))// false, karena dibalik
-console.log ( !(a < 21 && b > 30))
+console.log ( !(a < 21 && b > 30))*/
 
- 
+
+document.write(`<h3> Logical Operator </h3>`)
+
+
+/*document.write(`<li> Operator OR </li> `)
+
+let kabar = 9
+
+if (kabar < 12 || kabar > 14) {
+
+    document.write(`<p> Hai apa kabar </p> `)
+}
+
+document.write(`<h3> Operator OR akan menghasilkan true apabila salah satu kondisi bernilai true </h3>`)
+
+
+let a = 5
+document.write (`<p> ${a > 4 || a < 6}</p>`) // true, Karena keduanya true
+document.write( `<p> ${a > 4 || a < 3} </p>`) // true, Karena salah satunya true
+document.write(` <p> ${a > 6 || a < 4} </p>`) // false, false Karena keduanya false
+
+
+let x = 10
+
+if (x < 9 || x > 11) {
+
+    document.write(`<p> selamat pagi </p> `)
+}
+if (x < 11 || x > 12 ) {
+    document.write(`<p> selamt siang </p> `)
+}
+
+document.write(`<p> Ahmad Andre </p>`)*/
+
+
+
+
+/*document.write(`<li> Operator AND </li> `)
+
+let cuaca = 15
+
+if (cuaca > 12 && cuaca > 14) {
+
+    document.write(`<p> Hari ini cerah </p> `)// true karna semua kondisi bernilai true
+}
+
+document.write(`<h3> Operator AND akan menghasilkan true apabila semua kondisi bernilai true </h3>`)
+
+
+let a = 10
+document.write (`<p> ${a > 9 && a < 11}</p>`) // true, Karena keduanya true
+document.write( `<p> ${a > 11 && a < 12} </p>`) // false, Karena salah satu kondisi tidak terpenuhi ( false )
+document.write(` <p> ${a > 12 && a < 8} </p>`) // false, false Karena keduanya false
+
+
+let y = 20
+
+if (y < 21 && y > 22) {
+
+    document.write(`<p> Hari ini cerah </p> `)
+}
+if (y < 22 && y > 19 ) {
+    document.write(`<p> Hari ini hujan </p> `)
+}
+
+document.write(`<p> Ahmad Andre </p>`)*/
+
+
+document.write(`<li> Operator NOT </li> `)
+
+let a = 20
+
+if ( !(a >  19 && a < 18)) {
+
+document.write(`<p> Hari ini libur </p> `)// !(false && false ) -> !(false)->  true
+}
+
+document.write(`<h3> Operator NOT Digunakan untuk membalikan sutau kondisi </h3>`)
+
+document.write( `<p> ${!(a < 25)} </p> `)// false, karena dibalik
+document.write( `<p> ${!(a < 21 && a > 30)} </p>`) // false & true = true
+document.write( `<p> ${!(a < 19 && a > 22)} </p>`) // false & false = true
+
+
+
+if ( !(a < 21 && a > 19)) {
+
+    document.write(`<p> Hari ini libur </p> `) // true + true = false
+}
+if (!(a < 19 && a > 21 )) {
+    document.write(`<p> Hari ini kuliah </p> `) // false + false = true
+}
+
+document.write(`<p> Ahmad Andre </p>`)
+
     </script>
 </body>
 </html>
