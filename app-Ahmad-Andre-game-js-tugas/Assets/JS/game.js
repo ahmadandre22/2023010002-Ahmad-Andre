@@ -49,12 +49,12 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number."); 
     } 
 
-    const imageUrls = [
-        'image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 
-        'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 
-        'image9.jpg', 'image10.jpg'
+    const images = [ 
+        'img/image1.jpg', 'img/image2.jpg', 'img/image3.jpg', 'img/image4.jpg', 'img/image5.jpg', 
+        'img/image6.jpg', 'img/image7.jpg', 'img/image8.jpg', 'img/image9.jpg', 'img/image10.jpg',
+        'img/image11.jpg', 'img/image12.jpg', 'img/image13.jpg', 'img/image14.jpg', 'img/image15.jpg'
     ];     
-    const picks = pickRandom(imageUrls, (dimensions * dimensions) / 2); 
+    const picks = pickRandom(images, (dimensions * dimensions) / 2); 
     const items = shuffle([...picks, ...picks]); 
     const cards = ` 
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)"> 
