@@ -50,11 +50,11 @@ const generateGame = () => {
     } 
 
     const images = [ 
-        'img/image1.jpg', 'img/image2.jpg', 'img/image3.jpg', 'img/image4.jpg', 'img/image5.jpg', 
-        'img/image6.jpg', 'img/image7.jpg', 'img/image8.jpg', 'img/image9.jpg', 'img/image10.jpg',
-        'img/image11.jpg', 'img/image12.jpg', 'img/image13.jpg', 'img/image14.jpg', 'img/image15.jpg'
+        'Assets/img/image1.jpg', 'Assets/img/image2.jpg', 'Assets/img/image3.jpg', 'Assets/img/image4.jpg', 'Assets/img/image5.jpg', 
+        'Assets/img/image6.jpg', 'Assets/img/image7.jpg', 'Assets/img/image8.jpg', 'Assets/img/image9.jpg', 'Assets/img/image10.jpg',
+        'Assets/img/image11.jpg', 'Assets/img/image12.jpg', 'Assets/img/image13.jpg', 'Assets/img/image14.jpg', 'Assets/img/image15.jpg'
     ];     
-    const picks = pickRandom(images, (dimensions * dimensions) / 2); 
+    const picks = pickRandom(images, (dimensions * 5) / 2); 
     const items = shuffle([...picks, ...picks]); 
     const cards = ` 
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)"> 
@@ -106,9 +106,10 @@ const flipCard = card => {
     if (state.flippedCards === 2) { 
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)'); 
 
-        if (flippedCards[0].querySelector('.card-back img').src === flippedCards[1].querySelector('.card-back img').src) { 
-            flippedCards[0].classList.add('matched'); 
-            flippedCards[1].classList.add('matched'); 
+        if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) { 
+            flippedCards.forEach(card => { 
+                card.classList.add('matched'); 
+            }); 
         } 
 
         setTimeout(() => { 
@@ -119,15 +120,7 @@ const flipCard = card => {
     if (!document.querySelectorAll('.card:not(.flipped)').length) { 
         setTimeout(() => { 
             selectors.boardContainer.classList.add('flipped'); 
-            selectors.win.innerHTML = ` 
-                <span class="win-text"> 
-                    You won!<br /> 
-                    with <span class="highlight">${state.totalFlips}</span> moves<br /> 
-                    under <span class="highlight">${state.totalTime}</span> seconds 
-                </span> 
-            `; 
-
-            clearInterval(state.loop); 
+            selectors.win.classList.add('show'); 
         }, 1000); 
     } 
 } 
