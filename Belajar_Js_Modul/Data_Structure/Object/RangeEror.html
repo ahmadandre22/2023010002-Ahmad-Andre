@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function checkNumber(num) {
+  if (num > 100) {
+    throw new RangeError('The number is out of range');
+  }
+  return num;
+}
+
+try {
+  checkNumber(101);
+} catch (e) {
+  console.error(e.message); // Output: The number is out of range
+}
+
+    </script>
+</body>
+</html>
