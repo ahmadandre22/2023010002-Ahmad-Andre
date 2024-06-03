@@ -9,12 +9,14 @@
     <script>
 
 try {
-  eval('foo bar');
+  eval('var a = );'); // Invalid syntax
 } catch (e) {
-  console.error(e.message); // Output: Unexpected identifier
+  console.log(e.name + ": " + e.message); // Output: SyntaxError: Unexpected token )
 }
 
-//Kesalahan ini terjadi ketika ada kesalahan sintaks dalam kode.
+// SyntaxError menunjukkan kesalahan dalam sintaks kode.
+// eval('var a = );') mencoba mengeksekusi kode yang tidak valid dan memicu SyntaxError.
+// catch (e) menangkap kesalahan dan mencetak nama dan pesannya.
 
     </script>
 </body>

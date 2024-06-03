@@ -9,12 +9,14 @@
     <script>
 
 try {
-  decodeURIComponent('%');
+  decodeURIComponent('%'); // Invalid URI
 } catch (e) {
-  console.error(e.message); // Output: URI malformed
+  console.log(e.name + ": " + e.message); // Output: URIError: URI malformed
 }
 
-//Kesalahan ini terjadi ketika ada karakter yang tidak valid dalam fungsi URI (seperti `decodeURIComponent`).
+// URIError terjadi ketika fungsi pengkodean URI seperti decodeURIComponent() menemukan karakter yang tidak valid.
+// decodeURIComponent('%') mencoba menguraikan URI yang tidak valid dan memicu URIError.
+// catch (e) menangkap kesalahan dan mencetak nama dan pesannya.
 
     </script>
 </body>

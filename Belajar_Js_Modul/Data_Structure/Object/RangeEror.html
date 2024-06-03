@@ -10,7 +10,7 @@
 
 function checkNumber(num) {
   if (num > 100) {
-    throw new RangeError('The number is out of range');
+    throw new RangeError("The number is too large");
   }
   return num;
 }
@@ -18,10 +18,13 @@ function checkNumber(num) {
 try {
   checkNumber(101);
 } catch (e) {
-  console.error(e.message); // Output: The number is out of range
+  console.log(e.name + ": " + e.message); // Output: RangeError: The number is too large
 }
 
-//Kesalahan ini terjadi ketika sebuah nilai tidak berada dalam rentang yang diharapkan.
+// RangeError terjadi ketika nilai berada di luar rentang yang diizinkan.
+// checkNumber adalah fungsi yang memeriksa apakah num lebih besar dari 100 dan melempar RangeError jika ya.
+// try memanggil checkNumber dengan argumen 101, yang memicu RangeError.
+// catch (e) menangkap kesalahan dan mencetak nama dan pesannya.
     </script>
 </body>
 </html>

@@ -9,12 +9,19 @@
     <script>
 
 try {
-  throw new EvalError('EvalError example');
-} catch (e) {
-  console.error(e.message); // Output: EvalError example
+  eval("hello(");
+} catch (error) {
+  console.log(error instanceof EvalError); // Output: true
+  console.log(error.name); // Output: EvalError
+  console.log(error.message); // Output: Unexpected token ')'
 }
 
-//Kesalahan ini dilemparkan oleh fungsi `eval()`, meskipun dalam praktiknya jarang digunakan.
+// EvalError adalah jenis error yang terjadi saat ada kesalahan dalam menggunakan fungsi eval()di JavaScript.
+// Pada contoh di atas, kami mencoba menyalakan kode "hello("menggunakan eval(), yang merupakan sintaks JavaScript yang tidak valid.
+// Kita menangkap kesalahan tersebut dengan blok try...catch.
+// Di dalam blok catch, kita memeriksa apakah kesalahan yang ditangkap merupakan contoh dari EvalErrordengan error instanceof EvalError, yang dihasilkan true.
+// Kemudian, kami mencetak nama error ( error.name) dan pesan error ( error.message) yang terkait dengan kesalahan sintaks pada kode yang dievaluasi.
+
     </script>
 </body>
 </html>
