@@ -52,9 +52,13 @@ const generateGame = () => {
     const images = [ 
         'Assets/img/image1.jpg', 'Assets/img/image2.jpg', 'Assets/img/image3.jpg', 'Assets/img/image4.jpg', 'Assets/img/image5.jpg', 
         'Assets/img/image6.jpg', 'Assets/img/image7.jpg', 'Assets/img/image8.jpg', 'Assets/img/image9.jpg', 'Assets/img/image10.jpg',
-        'Assets/img/image11.jpg', 'Assets/img/image12.jpg', 'Assets/img/image13.jpg', 'Assets/img/image14.jpg', 'Assets/img/image15.jpg'
+        'Assets/img/image11.jpg', 'Assets/img/image12.jpg', 'Assets/img/image13.jpg', 'Assets/img/image14.jpg', 'Assets/img/image15.jpg',
+        'Assets/img/image16.jpg', 'Assets/img/image17.jpg', 'Assets/img/image18.jpg', 'Assets/img/image19.jpg', 'Assets/img/image20.jpg',
+        'Assets/img/image21.jpg', 'Assets/img/image22.jpg', 'Assets/img/image23.jpg', 'Assets/img/image24.jpg', 'Assets/img/image25.jpg',
+        'Assets/img/image26.jpg', 'Assets/img/image27.jpg', 'Assets/img/image28.jpg', 'Assets/img/image29.jpg', 'Assets/img/image30.jpg',
+        'Assets/img/image31.jpg','Assets/img/image32.jpg',
     ];     
-    const picks = pickRandom(images, (dimensions * 5) / 2); 
+    const picks = pickRandom(images, (dimensions * dimensions) / 2); 
     const items = shuffle([...picks, ...picks]); 
     const cards = ` 
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)"> 
