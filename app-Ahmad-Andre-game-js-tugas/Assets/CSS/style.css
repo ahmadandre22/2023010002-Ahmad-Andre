@@ -40,12 +40,12 @@ button {
     
     background: #282A3A;
     color: #FFF;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 50px 100px;
     border: 0;
     cursor: pointer;
     font-family: sans-serif;
-    font-size: 18pt;
+    font-size: 2em;
     
     
 } 
