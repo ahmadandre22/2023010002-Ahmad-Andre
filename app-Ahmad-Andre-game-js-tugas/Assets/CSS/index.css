@@ -1,0 +1,82 @@
+/* Mengatur gaya untuk halaman index.html */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(325deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
+}
+
+.container {
+    text-align: center;
+    background-color: linear-gradient(325deg, #fcc700 0%, #fc7900 50%, #6f00fc 100%);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #282A3A;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 30px;
+    animation: slideIn 0.7s ease-in-out;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #282A3A;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.start-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

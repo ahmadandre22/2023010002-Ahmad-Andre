@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*const user = {
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43
+}
+
+const {name,age} = user;
+
+console.log(name,age);*/
+
+
+/*let name ; 
+ ({name} = user)
+console.log(name)*/
+
+
+/*const user = {
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43
+}
+
+const {name,age,salary = 123455} = user;
+
+console.log(name,age,salary)*/
+
+const user = {
+    'first_name':'Ahmad',
+    'Last_name' :'Andre',
+}
+const {first_name,Last_name,full_name = `${first_name} ${Last_name}`} = user;
+
+console.log(full_name)
+
+    </script>
+</body>
+</html>
