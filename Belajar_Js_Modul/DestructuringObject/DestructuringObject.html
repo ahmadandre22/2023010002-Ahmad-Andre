@@ -34,13 +34,66 @@ const {name,age,salary = 123455} = user;
 
 console.log(name,age,salary)*/
 
+
+
 const user = {
     'first_name':'Ahmad',
     'Last_name' :'Andre',
 }
 const {first_name,Last_name,full_name = `${first_name} ${Last_name}`} = user;
 
-console.log(full_name)
+console.log(full_name)//Ahmad Andre
+
+
+
+
+/*Destructuring merupakan fitur pada ES6 yang mempermudahkan untuk mengolah nilai dari array maupun properti dari object pada javascript.
+ Destructure ini sering sekali kita gunakan baik ketika development di client side maupun server.
+  Selanjutnya kita akan lebih mengenal “apa itu destructuring object”.
+
+Kenapa Pakai Destructuring?
+Untuk mempermudah memahaminya, kita akan langsung menuju pada implementasi yang biasa kita lakukan.
+
+const book = {
+  "title": "Manusia Setengah Salmon",
+  "author": "Raditya Dika",
+  "publisher": {
+    "name": "Gagas Media",
+    "address": "Jakarta Selatan"
+  }
+}
+
+const title = book.title;
+const author = book.author;
+const publisher = book.publisher;
+
+console.log("saya membeli buku berjudul ", title); 
+console.log("buku ini karya ", author); 
+console.log("buku ini diterbitkan oleh ", publisher.name, "di kota ", publisher.address); 
+
+// saya membeli buku berjudul Manusia Setengah Salmon
+// buku ini karya Raditya Dika
+// buku ini diterbitkan oleh Gagas Media di kota Jakarta Selatan*/
+
+/*Destructuring adalah memecah komponen yang kompleks menjadi komponen yang lebih kecil. Dengan destructuring, kita dapat mengambil nilai dari array atau properties dari object dan menjadikannya variabel yang berbeda. Hal ini dapat mempermudah dalam pengolahan sesuai dengan kebutuhan kita. Destructuring dapat melakukan hal yang sama seperti kode diatas, namun dengan pendekatan yang lebih mudah dipahami dan lebih ringkas.
+
+Jika kita menggunakan destructuring pada kode diatas,
+ maka implementasinya adalah sebagai berikut : */
+
+const book = {
+    "title": "Manusia setengah Kuda",
+    "author":"Samsudin",
+    "publisher":{
+        "name":"Pesulap Merah",
+        "address":"Jakarta Selatan"
+    }
+}
+
+// destructuring
+
+const {title,author,publisher:{name,address}} = book;
+
+console.log(title, author, name, address);
 
     </script>
 </body>
