@@ -36,7 +36,7 @@ console.log(name,age,salary)*/
 
 
 
-const user = {
+/*const user = {
     'first_name':'Ahmad',
     'Last_name' :'Andre',
 }
@@ -80,7 +80,7 @@ console.log("buku ini diterbitkan oleh ", publisher.name, "di kota ", publisher.
 Jika kita menggunakan destructuring pada kode diatas,
  maka implementasinya adalah sebagai berikut : */
 
-const book = {
+/*const book = {
     "title": "Manusia setengah Kuda",
     "author":"Samsudin",
     "publisher":{
@@ -93,7 +93,187 @@ const book = {
 
 const {title,author,publisher:{name,address}} = book;
 
-console.log(title, author, name, address);
+console.log(title, author, name, address);*/
+
+
+/*const blueDino = { 
+    firstName: 'brachio',
+    lastName: 'saurus',
+    address: 'Jakarta'
+};
+
+const firstName = blueDino.firstName;
+const address = blueDino.address;
+
+console.log(firstName);
+console.log(address);*/
+
+/*const blueDino = { 
+    firstName: 'brachio',
+    lastName: 'saurus',
+    address: 'Jakarta'
+};
+
+const {firstName, address} = blueDino; // object destructuring
+
+console.log(firstName);
+console.log(address);*/
+
+/*const Hari = {
+  namaHari: "Senin"
+};
+
+const { namaHari, Tanggal = 25 } = Hari;
+
+console.log(namaHari); // Senin
+console.log(Tanggal); // 25 (nilai default)*/
+
+
+/*const orang = {
+  name: "Andre",
+  age : 19,
+  address: {
+    desa: "Buaran",
+    dukuh: "Karang Panas"
+  }
+};
+
+const { name, age, address: { desa, dukuh } } = orang;
+
+console.log(name); // Andre
+console.log(age);  // 19
+console.log(desa); // Buaran
+console.log(dukuh); // Karang Panas*/
+
+
+/*const person = {
+  name: "Maida",
+  age: 19
+};
+
+function printPerson({ name, age }) {
+  console.log(`Hai nama saya: ${name}, dan umur saya : ${age} tahun`);
+}
+
+printPerson(person); // Hai nama saya Maida dan umur saya : 19 tahun*/
+
+
+/*const person = {
+  name: "Ferdi",
+  age: 19,
+  desa : "Jatisari",
+  kecamatan: "Nalumsari"
+};
+
+const { name, age, ...rest } = person;
+
+console.log(name); // Ferdi
+console.log(age); // 19
+console.log(rest); // { desa: "Jatisari", kecamatan: "Nalumsari" }*/
+
+
+/*const key = "name";
+const person = {
+  name: "Syukron",
+  age: 20
+};
+
+const { [key]: dynamicname } = person;
+
+console.log(dynamicname); // Syukron*/
+
+
+
+function getPer() {
+  return {
+    name: "Andre",
+    age: 19,
+    address: "Karang Panas"
+  };
+}
+
+const { name, age, address } = getPer();
+
+console.log(name); // Andre
+console.log(age); // 19
+console.log(address); // Karang Panas
+
+
+/*const person = {
+  name: "Maida",
+  age: 19
+};
+
+function printPerson({ name: personName, age: personAge }) {
+  console.log(`Name: ${personName}, Age: ${personAge}`);
+}
+
+printPerson(person); // Name: Maida, Age: 19*/
+
+
+
+/*const person = {
+  name: "Ferdi",
+  hobbies: ["Membaca", "Olahraga", "Bernyanyi"]
+};
+
+const { name, hobbies: [hobby1, hobby2, hobby3] } = person;
+
+console.log(name); // Ferdi
+console.log(hobby1); // Membaca
+console.log(hobby2); // Olahraga
+console.log(hobby3); // Bernyanyi*/
+
+
+/*const person = {
+  name: "Syukron",
+  age: 20,
+  address: "Pecangaan"
+};
+
+const additionalInfo = {
+  country: "Indonesia",
+  job: "Teknisi Wifi"
+};
+
+const mergedPerson = { ...person, ...additionalInfo };
+
+console.log(mergedPerson);
+// Output: { name: "Syukron", age: 20, address: "Pecangaan", country: "Indonesia", job: "Teknisi Wifi" }*/
+
+
+
+/*const person = {
+  name: "Andre",
+  age: 19
+};
+
+const name = "Ferdi";
+
+const { name: personName, age } = person;
+
+console.log(name); // Ferdi
+console.log(personName); // Andre
+console.log(age); // 19*/
+
+
+
+
+/*function printPerson({ name = "Unknown", age = 0 } = {}) {
+  console.log(`Name: ${name}, Age: ${age}`);
+}
+
+printPerson(); // Name: Unknown, Age: 0
+printPerson({ name: "Maida", age: 19 }); // Name: Maida, Age: 19*/
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
