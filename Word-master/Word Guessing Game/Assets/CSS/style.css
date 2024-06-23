@@ -1,12 +1,11 @@
-/* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+body {
   display: flex;
   padding: 0 10px;
   min-height: 100vh;
@@ -14,27 +13,36 @@ body{
   justify-content: center;
   background: #1BB295;
 }
-.wrapper{
+.wrapper {
   width: 430px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.wrapper h1{
+.wrapper h1 {
   font-size: 25px;
   font-weight: 500;
   padding: 20px 25px;
   border-bottom: 1px solid #ccc;
 }
-.wrapper .content{
+.wrapper .content {
   margin: 25px 25px 35px;
 }
-.content .inputs{
+.content .image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.content .inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.inputs input{
+.inputs input {
   height: 57px;
   width: 56px;
   margin: 4px;
@@ -54,17 +62,14 @@ body{
   position: absolute;
   pointer-events: none;
 }
-.inputs input:first-child{
-  margin-left: 0px;
-}
-.content .details{
+.content .details {
   margin: 20px 0 25px;
 }
-.details p{
+.details p {
   font-size: 19px;
   margin-bottom: 10px;
 }
-.content .reset-btn{
+.content .reset-btn {
   width: 100%;
   border: none;
   cursor: pointer;
@@ -76,31 +81,30 @@ body{
   background: #1BB295;
   transition: all 0.3s ease;
 }
-.content .reset-btn:hover{
+.content .reset-btn:hover {
   background: #18a589;
 }
-
 @media screen and (max-width: 460px) {
   .wrapper {
     width: 100%;
   }
-  .wrapper h1{
+  .wrapper h1 {
     font-size: 22px;
     padding: 16px 20px;
   }
-  .wrapper .content{
+  .wrapper .content {
     margin: 25px 20px 35px;
   }
-  .inputs input{
+  .inputs input {
     height: 51px;
     width: 50px;
     margin: 3px;
     font-size: 22px;
   }
-  .details p{
+  .details p {
     font-size: 17px;
   }
-  .content .reset-btn{
+  .content .reset-btn {
     padding: 14px 0;
     font-size: 16px;
   }

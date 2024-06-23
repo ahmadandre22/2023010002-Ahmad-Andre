@@ -3,18 +3,22 @@ hintTag = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
 resetBtn = document.querySelector(".reset-btn"),
-typingInput = document.querySelector(".typing-input");
+typingInput = document.querySelector(".typing-input"),
+levelTag = document.querySelector(".level span"),
+quizImage = document.querySelector(".quiz-image");
 
-let word, maxGuesses, incorrectLetters = [], correctLetters = [];
+let word, maxGuesses, incorrectLetters = [], correctLetters = [], currentLevel = 1;
 
 function randomWord() {
-    let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
+    let filteredWords = wordList.filter(item => item.level === currentLevel);
+    let ranItem = filteredWords[Math.floor(Math.random() * filteredWords.length)];
     word = ranItem.word;
     maxGuesses = word.length >= 5 ? 8 : 6;
     correctLetters = []; incorrectLetters = [];
     hintTag.innerText = ranItem.hint;
     guessLeft.innerText = maxGuesses;
     wrongLetter.innerText = incorrectLetters;
+    quizImage.src = ranItem.image;
 
     let html = "";
     for (let i = 0; i < word.length; i++) {
@@ -46,6 +50,8 @@ function initGame(e) {
     setTimeout(() => {
         if(correctLetters.length === word.length) {
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
+            currentLevel++;
+            levelTag.innerText = currentLevel;
             return randomWord();
         } else if(maxGuesses < 1) {
             alert("Game over! You don't have remaining guesses");
@@ -56,7 +62,11 @@ function initGame(e) {
     }, 100);
 }
 
-resetBtn.addEventListener("click", randomWord);
+resetBtn.addEventListener("click", () => {
+    currentLevel = 1;
+    levelTag.innerText = currentLevel;
+    randomWord();
+});
 typingInput.addEventListener("input", initGame);
 inputs.addEventListener("click", () => typingInput.focus());
 document.addEventListener("keydown", () => typingInput.focus());
