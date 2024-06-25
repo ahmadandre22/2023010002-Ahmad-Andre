@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f5;
+    background: linear-gradient(325deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
     color: #333;
 }
 
@@ -30,7 +30,7 @@ header {
     flex: 1;
     padding: 20px;
     text-align: center;
-    background-color: #ffffff;
+    background: #fcc700;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px;
     border-radius: 10px;

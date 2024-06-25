@@ -1,0 +1,107 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #1BB295;
+}
+.wrapper{
+  width: 430px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper h1{
+  font-size: 25px;
+  font-weight: 500;
+  padding: 20px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper .content{
+  display: none;
+  margin: 25px 25px 35px;
+}
+.player-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-info label, .player-info input, .player-info button {
+  margin-bottom: 10px;
+}
+.game-info {
+  margin-bottom: 20px;
+}
+.game-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.options button:hover {
+  background-color: #d0d0d0;
+}
+.next-btn, .reset-btn {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1BB295;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.next-btn:hover, .reset-btn:hover {
+  background-color: #18a589;
+}
+.result {
+  display: none;
+  font-size: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 460px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper h1 {
+    font-size: 22px;
+    padding: 16px 20px;
+  }
+  .wrapper .content {
+    margin: 25px 20px 35px;
+  }
+  .options button {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .next-btn, .reset-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

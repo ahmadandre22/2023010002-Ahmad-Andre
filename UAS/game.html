@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Game Kuis Sejarah Indonesia</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Kuis Sejarah Indonesia</h1>
+        <div class="player-info">
+            <label for="playerName">Masukkan Nama Pemain:</label>
+            <input type="text" id="playerName">
+            <button id="startGame">Mulai Permainan</button>
+        </div>
+
+        <div class="content">
+            <div class="game-info">
+                <p>Pemain: <span class="player-name"></span></p>
+                <p>Level: <span class="level"></span></p>
+            </div>
+
+            <div class="question"></div>
+            <div class="options"></div>
+            
+            <button class="next-btn">Level Selanjutnya</button>
+            <button class="reset-btn">Ulangi Permainan</button>
+            <div class="result"></div>
+        </div>
+    </div>
+
+    <script src="Assets/JS/questions.js"></script>
+    <script src="Assets/JS/script.js"></script>
+</body>
+</html>
