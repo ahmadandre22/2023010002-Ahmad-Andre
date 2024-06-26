@@ -13,7 +13,6 @@ let playerName = "";
 let currentLevel = 0;
 let totalLevels = levels.length;
 let currentQuestionIndex = 0;
-let totalQuestionsPerLevel = 2; // Change this if more questions per level
 let correctAnswers = 0;
 
 function startGame() {
@@ -44,8 +43,12 @@ function displayQuestion(questionObj) {
   optionsElement.innerHTML = "";
   questionObj.options.forEach(option => {
     const button = document.createElement("button");
-    button.textContent = option;
-    button.addEventListener("click", () => checkAnswer(option, questionObj.answer));
+    const img = document.createElement("img");
+    img.src = option.image;
+    img.alt = option.text;
+    button.appendChild(img);
+    button.appendChild(document.createTextNode(option.text));
+    button.addEventListener("click", () => checkAnswer(option.text, questionObj.answer));
     optionsElement.appendChild(button);
   });
 }
@@ -55,7 +58,7 @@ function checkAnswer(selected, correct) {
     alert("Jawaban benar!");
     correctAnswers++;
     currentQuestionIndex++;
-    if (currentQuestionIndex < totalQuestionsPerLevel) {
+    if (currentQuestionIndex < levels[currentLevel].length) {
       displayQuestion(levels[currentLevel][currentQuestionIndex]);
     } else {
       showNextButton();
