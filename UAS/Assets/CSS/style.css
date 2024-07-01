@@ -1,115 +1,178 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-  display: flex;
-  padding: 0 10px;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #1BB295;
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
+    padding: 0 10px;
 }
-.wrapper{
-  width: 430px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
-.wrapper h1{
-  font-size: 25px;
-  font-weight: 500;
-  padding: 20px 25px;
-  border-bottom: 1px solid #ccc;
+
+.wrapper h1 {
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    color: #4a90e2; /* Blue color */
 }
-.wrapper .content{
-  display: none;
-  margin: 25px 25px 35px;
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f0f0f0; /* Light gray background for input section */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.player-info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .player-info label, .player-info input, .player-info button {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
-.game-info {
-  margin-bottom: 20px;
-}
-.game-info p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.question {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.options button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.options button img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-.options button:hover {
-  background-color: #d0d0d0;
-}
-.next-btn, .reset-btn {
-  display: none;
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  font-size: 17px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1BB295;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.next-btn:hover, .reset-btn:hover {
-  background-color: #18a589;
-}
-.result {
-  display: none;
-  font-size: 20px;
-  text-align: center;
-}
-@media screen and (max-width: 460px) {
-  .wrapper {
+
+.player-info input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
-  }
-  .wrapper h1 {
-    font-size: 22px;
-    padding: 16px 20px;
-  }
-  .wrapper .content {
-    margin: 25px 20px 35px;
-  }
-  .options button {
-    font-size: 14px;
-    padding: 8px;
-  }
-  .next-btn, .reset-btn {
-    font-size: 14px;
-    padding: 8px;
-  }
+    max-width: 300px;
+}
+
+.player-info button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000; /* Red button color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.player-info button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+.game-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4a90e2; /* Blue color */
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.options button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* White button background */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options button img {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.options button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.next-btn, .reset-btn {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000; /* Red button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover, .reset-btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.result {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    color: #4a90e2; /* Blue color */
+}
+
+.game-over {
+    display: none;
+    text-align: center;
+    font-size: 24px;
+    color: #ff0000; /* Red color */
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .player-info input {
+        max-width: 100%;
+    }
+    
+    .options button {
+        width: 100%;
+    }
 }

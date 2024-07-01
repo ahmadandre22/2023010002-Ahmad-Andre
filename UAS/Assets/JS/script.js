@@ -86,7 +86,7 @@ function nextLevel() {
 function showResult(win) {
   contentSection.style.display = "none";
   resultDisplay.style.display = "block";
-  resultDisplay.textContent = win ? `Selamat ${playerName}, Anda menang dengan ${correctAnswers} jawaban benar! 🎉` : `Maaf ${playerName}, Anda kalah! 😔`;
+  resultDisplay.innerHTML = win ? `<p>Selamat <strong>${playerName}</strong>, Anda menang dengan ${correctAnswers} jawaban benar! 🎉</p><p>Terima kasih telah bermain!</p>` : `<p>Maaf <strong>${playerName}</strong>, Anda kalah! 😔</p><p>Silakan coba lagi.</p>`;
 }
 
 startGameButton.addEventListener("click", startGame);

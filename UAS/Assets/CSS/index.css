@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(325deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #333;
 }
 
@@ -17,24 +17,22 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(325deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #fff;
 }
 
-
-.game-image{
-    width:70px ;
-    height:70px;
+.game-image {
+    width: 70px;
+    height: 70px;
     border-radius: 15%;
 }
 
 .logo {
     width: 50px;
     height: 50px;
-
 }
 
-.logo-game{
+.logo-game {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -44,18 +42,18 @@ header {
     flex: 1;
     padding: 20px;
     text-align: center;
-    background: #fcc700;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #ffffff; /* White background for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 10px;
 }
 
 .content h1 {
-    color: #4a90e2;
+    color: #ff0000; /* Red color */
 }
 
 .content p {
-    color: #555;
+    color: #333;
 }
 
 .content img {
@@ -71,7 +69,7 @@ form {
 form input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -79,7 +77,7 @@ form input {
 form button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4a90e2;
+    background-color: #ff0000; /* Red button color */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -88,7 +86,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #357ab8;
+    background-color: #cc0000; /* Darker red on hover */
 }
 
 footer {
@@ -96,7 +94,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(325deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #fff;
     position: relative;
 }
@@ -116,7 +114,7 @@ footer {
 .footer-center button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #357ab8;
+    background-color: #cc0000; /* Darker red button color */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -125,11 +123,12 @@ footer {
 }
 
 .footer-center button:hover {
-    background-color: #2a5d8f;
+    background-color: #990000; /* Even darker red on hover */
 }
 
 .footer-right {
     text-align: right;
+    color :#000
 }
 
 .footer-right p {
