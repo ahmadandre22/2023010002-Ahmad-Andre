@@ -5,21 +5,21 @@ const levels = [
       question: "Siapa proklamator kemerdekaan Indonesia?",
       options: [
         { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
-        { text: "Hatta", image: "Assets/Images/hatta.jpg" },
-        { text: "Soeharto", image: "Assets/Images/soeharto.jpg" },
-        { text: "Jokowi", image: "Assets/Images/jokowi.jpg" }
+        { text: "Hatta", image: "Assets/Img/hatta.jpg" },
+        { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
+        { text: "Jokowi", image: "Assets/Img/jokowi.jpeg" }
       ],
       answer: "Soekarno"
     },
     {
-      question: "Kapan Indonesia merdeka?",
+      question: "Siapakah wakil presiden pertama Indonesia?",
       options: [
-        { text: "1945", image: "Assets/Images/1945.jpg" },
-        { text: "1950", image: "Assets/Images/1950.jpg" },
-        { text: "1965", image: "Assets/Images/1965.jpg" },
-        { text: "1970", image: "Assets/Images/1970.jpg" }
+        { text: "Hatta", image: "Assets/Img/hatta.jpg" },
+        { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
+        { text: "Gus Dur", image: "Assets/Images/gus_dur.jpg" },
+        { text: "Megawati", image: "Assets/Images/megawati.jpg" }
       ],
-      answer: "1945"
+      answer: "Hatta"
     }
   ],
   // Level 2 (5 options)
@@ -50,7 +50,7 @@ const levels = [
   // Level 3 (6 options)
   [
     {
-      question: "Siapa tokoh pahlawan nasional yang dikenal dengan 'Si Pitung'?",
+      question: "Siapa tokoh pahlawan nasional yang dikenal dengan 'Pejuang Kemerdekaan Aceh'?",
       options: [
         { text: "Cut Nyak Dien", image: "Assets/Images/cut_nyak_dien.jpg" },
         { text: "Teuku Umar", image: "Assets/Images/teuku_umar.jpg" },
@@ -59,8 +59,9 @@ const levels = [
         { text: "Sudirman", image: "Assets/Images/sudirman.jpg" },
         { text: "Sisingamangaraja", image: "Assets/Images/sisingamangaraja.jpg" }
       ],
-      answer: "Si Pitung"
+      answer: "Teuku Umar"
     },
+    
     {
       question: "Apa nama bendera perjuangan Indonesia yang digunakan pada masa pergerakan nasional?",
       options: [
@@ -79,29 +80,30 @@ const levels = [
     {
       question: "Siapakah presiden Indonesia yang pertama?",
       options: [
-        { text: "Soekarno", image: "Assets/Images/soekarno.jpg" },
-        { text: "Soeharto", image: "Assets/Images/soeharto.jpg" },
+        { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
+        { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
         { text: "Habibie", image: "Assets/Images/habibie.jpg" },
         { text: "Gus Dur", image: "Assets/Images/gus_dur.jpg" },
         { text: "Megawati", image: "Assets/Images/megawati.jpg" },
-        { text: "Jokowi", image: "Assets/Images/jokowi.jpg" },
+        { text: "Jokowi", image: "Assets/Img/jokowi.jpeg" },
         { text: "SBY", image: "Assets/Images/sby.jpg" }
       ],
       answer: "Soekarno"
     },
     {
-      question: "Kapan terjadinya Agresi Militer Belanda II di Indonesia?",
+      question: "Siapakah presiden Indonesia yang memerintah pada tahun 1998?",
       options: [
-        { text: "1947", image: "Assets/Images/1947.jpg" },
-        { text: "1948", image: "Assets/Images/1948.jpg" },
-        { text: "1949", image: "Assets/Images/1949.jpg" },
-        { text: "1950", image: "Assets/Images/1950.jpg" },
-        { text: "1951", image: "Assets/Images/1951.jpg" },
-        { text: "1952", image: "Assets/Images/1952.jpg" },
-        { text: "1953", image: "Assets/Images/1953.jpg" }
+        { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
+        { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
+        { text: "BJ Habibie", image: "Assets/Images/habibie.jpg" },
+        { text: "Abdurrahman Wahid (Gus Dur)", image: "Assets/Images/gus_dur.jpg" },
+        { text: "Megawati Soekarnoputri", image: "Assets/Images/megawati.jpg" },
+        { text: "Susilo Bambang Yudhoyono (SBY)", image: "Assets/Images/sby.jpg" },
+        { text: "Joko Widodo (Jokowi)", image: "Assets/Img/jokowi.jpeg" }
       ],
-      answer: "1948"
-    }
+      answer: "BJ Habibie"
+    },
+    
   ],
   // Level 5 (8 options)
   [
@@ -137,21 +139,6 @@ const levels = [
   // Level 6 (9 options)
   [
     {
-      question: "Kapan Sumpah Pemuda dicetuskan?",
-      options: [
-        { text: "1926", image: "Assets/Images/1926.jpg" },
-        { text: "1927", image: "Assets/Images/1927.jpg" },
-        { text: "1928", image: "Assets/Images/1928.jpg" },
-        { text: "1929", image: "Assets/Images/1929.jpg" },
-        { text: "1930", image: "Assets/Images/1930.jpg" },
-        { text: "1931", image: "Assets/Images/1931.jpg" },
-        { text: "1932", image: "Assets/Images/1932.jpg" },
-        { text: "1933", image: "Assets/Images/1933.jpg" },
-        { text: "1934", image: "Assets/Images/1934.jpg" }
-      ],
-      answer: "1928"
-    },
-    {
       question: "Siapakah pahlawan nasional wanita yang berasal dari Aceh?",
       options: [
         { text: "R.A. Kartini", image: "Assets/Images/ra_kartini.jpg" },
@@ -165,6 +152,21 @@ const levels = [
         { text: "Siti Hartinah", image: "Assets/Images/siti_hartinah.jpg" }
       ],
       answer: "Cut Nyak Dien"
+    },
+    {
+      question: "Siapakah yang dikenal sebagai Bapak Pendidikan Nasional?",
+      options: [
+        { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
+        { text: "Ki Hajar Dewantara", image: "Assets/Images/ki_hajar_dewantara.jpg" },
+        { text: "Sudirman", image: "Assets/Images/sudirman.jpg" },
+        { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
+        { text: "Hatta", image: "Assets/Img/hatta.jpg" },
+        { text: "Bung Tomo", image: "Assets/Images/bung_tomo.jpg" },
+        { text: "Mohammad Yamin", image: "Assets/Images/mohammad_yamin.jpg" },
+        { text: "Pattimura", image: "Assets/Images/pattimura.jpg" },
+        { text: "Djuanda Kartawidjaja", image: "Assets/Images/djuanda_kartawidjaja.jpg" }
+      ],
+      answer: "Ki Hajar Dewantara"
     }
   ]
 ];

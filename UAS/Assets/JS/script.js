@@ -94,3 +94,5 @@ nextButton.addEventListener("click", nextLevel);
 resetButton.addEventListener("click", () => {
   location.reload();
 });
+
+
