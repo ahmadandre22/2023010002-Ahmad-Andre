@@ -1,93 +1,62 @@
-const playerNameInput = document.getElementById("playerName");
-const startGameButton = document.getElementById("startGame");
-const contentSection = document.querySelector(".content");
-const playerNameDisplay = document.querySelector(".player-name");
-const questionElement = document.querySelector(".question");
-const optionsElement = document.querySelector(".options");
-const nextButton = document.querySelector(".next-btn");
-const resetButton = document.querySelector(".reset-btn");
-const levelDisplay = document.querySelector(".level");
-const resultDisplay = document.querySelector(".result");
+const inputs = document.querySelector(".inputs"),
+hintTag = document.querySelector(".hint span"),
+guessLeft = document.querySelector(".guess-left span"),
+wrongLetter = document.querySelector(".wrong-letter span"),
+resetBtn = document.querySelector(".reset-btn"),
+typingInput = document.querySelector(".typing-input");
 
-let playerName = "";
-let currentLevel = 0;
-let totalLevels = levels.length;
-let currentQuestionIndex = 0;
-let totalQuestionsPerLevel = 2; // Change this if more questions per level
-let correctAnswers = 0;
+let word, maxGuesses, incorrectLetters = [], correctLetters = [];
 
-function startGame() {
-  playerName = playerNameInput.value.trim();
-  if (playerName) {
-    playerNameDisplay.textContent = playerName;
-    document.querySelector(".player-info").style.display = "none";
-    contentSection.style.display = "block";
-    loadLevel(currentLevel);
-  } else {
-    alert("Masukkan nama pemain!");
-  }
-}
+function randomWord() {
+    let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
+    word = ranItem.word;
+    maxGuesses = word.length >= 5 ? 8 : 6;
+    correctLetters = []; incorrectLetters = [];
+    hintTag.innerText = ranItem.hint;
+    guessLeft.innerText = maxGuesses;
+    wrongLetter.innerText = incorrectLetters;
 
-function loadLevel(level) {
-  levelDisplay.textContent = `Level ${level + 1}`;
-  const levelQuestions = levels[level];
-  if (levelQuestions) {
-    currentQuestionIndex = 0;
-    displayQuestion(levelQuestions[currentQuestionIndex]);
-  } else {
-    showResult(true); // Player wins if all levels completed
-  }
-}
-
-function displayQuestion(questionObj) {
-  questionElement.textContent = questionObj.question;
-  optionsElement.innerHTML = "";
-  questionObj.options.forEach(option => {
-    const button = document.createElement("button");
-    button.textContent = option;
-    button.addEventListener("click", () => checkAnswer(option, questionObj.answer));
-    optionsElement.appendChild(button);
-  });
-}
-
-function checkAnswer(selected, correct) {
-  if (selected === correct) {
-    alert("Jawaban benar!");
-    correctAnswers++;
-    currentQuestionIndex++;
-    if (currentQuestionIndex < totalQuestionsPerLevel) {
-      displayQuestion(levels[currentLevel][currentQuestionIndex]);
-    } else {
-      showNextButton();
+    let html = "";
+    for (let i = 0; i < word.length; i++) {
+        html += `<input type="text" disabled>`;
+        inputs.innerHTML = html;
     }
-  } else {
-    alert("Jawaban salah, coba lagi!");
-    showResult(false);
-  }
+}
+randomWord();
+
+function initGame(e) {
+    let key = e.target.value.toLowerCase();
+    if(key.match(/^[A-Za-z]+$/) && !incorrectLetters.includes(` ${key}`) && !correctLetters.includes(key)) {
+        if(word.includes(key)) {
+            for (let i = 0; i < word.length; i++) {
+                if(word[i] == key) {
+                    correctLetters += key;
+                    inputs.querySelectorAll("input")[i].value = key;
+                }
+            }
+        } else {
+            maxGuesses--;
+            incorrectLetters.push(` ${key}`);
+        }
+        guessLeft.innerText = maxGuesses;
+        wrongLetter.innerText = incorrectLetters;
+    }
+    typingInput.value = "";
+
+    setTimeout(() => {
+        if(correctLetters.length === word.length) {
+            alert(`Congrats! You found the word ${word.toUpperCase()}`);
+            return randomWord();
+        } else if(maxGuesses < 1) {
+            alert("Game over! You don't have remaining guesses");
+            for(let i = 0; i < word.length; i++) {
+                inputs.querySelectorAll("input")[i].value = word[i];
+            }
+        }
+    }, 100);
 }
 
-function showNextButton() {
-  if (currentLevel < totalLevels - 1) {
-    nextButton.style.display = "block";
-  } else {
-    showResult(true); // Player wins if all questions answered correctly
-  }
-}
-
-function nextLevel() {
-  currentLevel++;
-  nextButton.style.display = "none";
-  loadLevel(currentLevel);
-}
-
-function showResult(win) {
-  contentSection.style.display = "none";
-  resultDisplay.style.display = "block";
-  resultDisplay.textContent = win ? `Selamat ${playerName}, Anda menang dengan ${correctAnswers} jawaban benar! 🎉` : `Maaf ${playerName}, Anda kalah! 😔`;
-}
-
-startGameButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", nextLevel);
-resetButton.addEventListener("click", () => {
-  location.reload();
-});
+resetBtn.addEventListener("click", randomWord);
+typingInput.addEventListener("input", initGame);
+inputs.addEventListener("click", () => typingInput.focus());
+document.addEventListener("keydown", () => typingInput.focus());

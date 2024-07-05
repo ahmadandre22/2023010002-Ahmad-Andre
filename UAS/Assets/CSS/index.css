@@ -4,12 +4,21 @@ body {
     padding: 0;
     background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -19,12 +28,29 @@ header {
     padding: 10px 20px;
     background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #fff;
+    opacity: 0;
+    animation: slideInDown 1s forwards;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .game-image {
     width: 70px;
     height: 70px;
     border-radius: 15%;
+    transition: transform 0.3s ease;
+}
+
+.game-image:hover {
+    transform: scale(1.1);
 }
 
 .logo {
@@ -38,6 +64,20 @@ header {
     border-radius: 50%;
 }
 
+.rotating-logo,
+.rotating-image {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .content {
     flex: 1;
     padding: 20px;
@@ -46,6 +86,39 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes textSlideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animated-text {
+    animation: textSlideIn 1s forwards;
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.animated-text:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.animated-text:nth-child(4) {
+    animation-delay: 2s;
 }
 
 .content h1 {
@@ -66,14 +139,6 @@ form {
     margin-top: 20px;
 }
 
-form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
 form button {
     padding: 10px 20px;
     font-size: 16px;
@@ -82,11 +147,12 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
     background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05);
 }
 
 footer {
@@ -97,6 +163,18 @@ footer {
     background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
     color: #fff;
     position: relative;
+    opacity: 0;
+    animation: slideInUp 1s forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .footer-left {
@@ -128,7 +206,7 @@ footer {
 
 .footer-right {
     text-align: right;
-    color :#000
+    color: #000;
 }
 
 .footer-right p {

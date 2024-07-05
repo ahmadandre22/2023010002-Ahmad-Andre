@@ -100,47 +100,42 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .options button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 180px;
     padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff; /* White button background */
+    background-color: #ffffff; /* White background for options */
+    border: 1px solid #ccc;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .options button img {
-    width: 100%;
-    height: 100px;
+    max-width: 100px;
+    height: auto;
     margin-bottom: 10px;
-    border-radius: 5px;
-    object-fit: cover;
 }
 
 .options button:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
+    background-color: #ffcccc; /* Light red on hover */
 }
 
 .next-btn, .reset-btn {
     display: none;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 17px;
+    padding: 12px 20px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     background-color: #ff0000; /* Red button color */
-    color: white;
+    color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
+    align-self: center;
 }
 
 .next-btn:hover, .reset-btn:hover {
@@ -149,35 +144,8 @@ body {
 
 .result {
     display: none;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0; /* Light gray background */
+    font-size: 20px;
     text-align: center;
-}
-
-.result p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.result strong {
-    color: #4a90e2; /* Blue color */
-}
-
-.result p:last-child {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .options button {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .wrapper {
-        width: 100%;
-        padding: 10px;
-    }
-}
