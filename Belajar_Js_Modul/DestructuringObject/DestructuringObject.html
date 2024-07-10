@@ -217,12 +217,12 @@ printPerson(person); // Name: Maida, Age: 19*/
   hobbies: ["Membaca", "Olahraga", "Bernyanyi"]
 };
 
-const { name, hobbies: [hobby1, hobby2, hobby3] } = person;
+const { name, hobbies: [p1, p2, p3] } = person;
 
 console.log(name); // Ferdi
-console.log(hobby1); // Membaca
-console.log(hobby2); // Olahraga
-console.log(hobby3); // Bernyanyi*/
+console.log(p1); // Membaca
+console.log(p2); // Olahraga
+console.log(p3); // Bernyanyi
 
 
 /*const person = {
@@ -255,7 +255,7 @@ const { name: personName, age } = person;
 console.log(name); // Ferdi
 console.log(personName); // Andre
 console.log(age); // 19
-
+console.log(person) 
 
 
 
@@ -265,6 +265,21 @@ console.log(age); // 19
 
 printPerson(); // Name: Unknown, Age: 0
 printPerson({ name: "Maida", age: 19 }); // Name: Maida, Age: 19*/
+
+
+/*const person = {
+    firstName: 'Fariq',
+    lastName: 'sukron',
+    age: 60
+};
+
+// Destructuring dengan alias
+const { firstName: first, lastName: last, age } = person;
+
+console.log(first); 
+console.log(last);   
+console.log(age); */  
+
 
 
 

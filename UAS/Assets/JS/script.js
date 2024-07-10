@@ -97,32 +97,31 @@ function nextLevel() {
 }
 
 function showResult() {
-    contentSection.style.display = "none";
-    resultDisplay.style.display = "block";
     let levelSummary = "";
     let totalPoints = 0;
     
     for (let i = 0; i < totalLevels; i++) {
-        levelSummary += `<p>Level ${i + 1}: ${levelScores[i]} poin (${levels[i].length} soal)</p>`;
+        levelSummary += `Level ${i + 1}: ${levelScores[i]} poin (${levels[i].length} soal)\n`;
         totalPoints += levelScores[i];
     }
 
-    resultDisplay.innerHTML = `
-        <p>Selamat <strong>${playerName}</strong>,</p>
-        <p>Anda menjawab ${correctAnswers} pertanyaan dengan benar</p>
-        <p>Skor akhir Anda adalah ${totalPoints}</p>
-        <p>Rekap Skor:</p>
-        ${levelSummary}
-        <p>Terima kasih telah bermain!</p>
-        <button onclick="resetGame()">Main Lagi</button>
-    `;
+    // Display result using alert
+    alert(
+        `Selamat ${playerName},\n` +
+        `Anda menjawab ${correctAnswers} pertanyaan dengan benar\n` +
+        `Skor akhir Anda adalah ${totalPoints}\n\n` +
+        `Rekap Skor:\n` +
+        `${levelSummary}\n` +
+        `Terima kasih telah bermain!`
+    );
+
     stopTimer(); // Stop timer when the game is over
 }
 
 // Timer
 let timerInterval;
 function startTimer() {
-    timer = 120; // Reset timer to 60 seconds
+    timer = 60; // Reset timer to 60 seconds
     timerDisplay.textContent = timer;
     timerInterval = setInterval(() => {
         timer--;

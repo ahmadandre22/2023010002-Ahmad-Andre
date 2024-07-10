@@ -16,8 +16,8 @@ const levels = [
       options: [
         { text: "Hatta", image: "Assets/Img/hatta.jpg" },
         { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
-        { text: "Gus Dur", image: "Assets/Images/gus_dur.jpg" },
-        { text: "Megawati", image: "Assets/Images/megawati.jpg" }
+        { text: "Gus Dur", image: "Assets/Img/Gusdur.jpeg" },
+        { text: "Megawati", image: "Assets/Img/Megawati.jpeg" }
       ],
       answer: "Hatta"
     }
@@ -27,22 +27,22 @@ const levels = [
     {
       question: "Apa nama kerajaan Hindu pertama di Indonesia?",
       options: [
-        { text: "Majapahit", image: "Assets/Images/majapahit.jpg" },
-        { text: "Sriwijaya", image: "Assets/Images/sriwijaya.jpg" },
-        { text: "Kutai", image: "Assets/Images/kutai.jpg" },
-        { text: "Tarumanegara", image: "Assets/Images/tarumanegara.jpg" },
-        { text: "Singasari", image: "Assets/Images/singasari.jpg" }
+        { text: "Majapahit", image: "Assets/Img/Majapahit.jpeg" },
+        { text: "Sriwijaya", image: "Assets/Img/Sriwijaya.jpeg" },
+        { text: "Kutai", image: "Assets/Img/Kutai.jpeg" },
+        { text: "Tarumanegara", image: "Assets/Img/Tarumanegara.jpeg" },
+        { text: "Singasari", image: "Assets/Img/Singasari.jpeg" }
       ],
       answer: "Kutai"
     },
     {
       question: "Siapa penulis kitab Sutasoma?",
       options: [
-        { text: "Mpu Tantular", image: "Assets/Images/mpu_tantular.jpg" },
-        { text: "Mpu Gandring", image: "Assets/Images/mpu_gandring.jpg" },
-        { text: "Mpu Sedah", image: "Assets/Images/mpu_sedah.jpg" },
-        { text: "Mpu Prapanca", image: "Assets/Images/mpu_prapanca.jpg" },
-        { text: "Mpu Kanwa", image: "Assets/Images/mpu_kanwa.jpg" }
+        { text: "Mpu Tantular", image: "Assets/Img/Mpu Tantular.jpeg" },
+        { text: "Mpu Gandring", image: "Assets/Img/Mpu Gandring.jpeg" },
+        { text: "Mpu Sedah", image: "Assets/Img/Mpu Sedah.jpg" },
+        { text: "Mpu Prapanca", image: "Assets/Img/Mpu Prapanca.jpeg" },
+        { text: "Mpu Kanwa", image: "Assets/Img/Mpu Kanwa.jpeg" }
       ],
       answer: "Mpu Tantular"
     }
@@ -52,12 +52,12 @@ const levels = [
     {
       question: "Siapa tokoh pahlawan nasional yang dikenal dengan 'Pejuang Kemerdekaan Aceh'?",
       options: [
-        { text: "Cut Nyak Dien", image: "Assets/Images/cut_nyak_dien.jpg" },
-        { text: "Teuku Umar", image: "Assets/Images/teuku_umar.jpg" },
-        { text: "Pangeran Diponegoro", image: "Assets/Images/pangeran_diponegoro.jpg" },
-        { text: "Si Pitung", image: "Assets/Images/si_pitung.jpg" },
-        { text: "Sudirman", image: "Assets/Images/sudirman.jpg" },
-        { text: "Sisingamangaraja", image: "Assets/Images/sisingamangaraja.jpg" }
+        { text: "Cut Nyak Dien", image: "Assets/Img/Cut Nyak Dien.jpeg" },
+        { text: "Teuku Umar", image: "Assets/Img/Teuku Umar.jpeg" },
+        { text: "Pangeran Diponegoro", image: "Assets/Img/Pangeran Diponegoro.jpeg" },
+        { text: "Si Pitung", image: "Assets/Img/Si Pitung.jpeg" },
+        { text: "Sudirman", image: "Assets/Img/Sudirman.jpeg" },
+        { text: "Sisingamangaraja", image: "Assets/Img/Sisingamangraja.jpeg" }
       ],
       answer: "Teuku Umar"
     },
@@ -65,12 +65,12 @@ const levels = [
     {
       question: "Apa nama bendera perjuangan Indonesia yang digunakan pada masa pergerakan nasional?",
       options: [
-        { text: "Merah Putih", image: "Assets/Images/merah_putih.jpg" },
-        { text: "Bintang Kejora", image: "Assets/Images/bintang_kejora.jpg" },
-        { text: "Bendera Pusaka", image: "Assets/Images/bendera_pusaka.jpg" },
-        { text: "Dwiwarna", image: "Assets/Images/dwiwarna.jpg" },
-        { text: "Garuda", image: "Assets/Images/garuda.jpg" },
-        { text: "Sang Saka Merah Putih", image: "Assets/Images/sang_saka_merah_putih.jpg" }
+        { text: "Merah Putih", image: "Assets/Img/Merah Putih.jpeg" },
+        { text: "Bintang Kejora", image: "Assets/Img/Bintang Kejora.jpeg" },
+        { text: "Bendera Pusaka", image: "Assets/Img/bendera_pusaka.jpg" },
+        { text: "Dwiwarna", image: "Assets/Img/dwiwarna.jpg" },
+        { text: "Garuda", image: "Assets/Img/Garuda.png" },
+        { text: "Sang Saka Merah Putih", image: "Assets/Img/sang_saka_merah_putih.jpg" }
       ],
       answer: "Merah Putih"
     }
@@ -82,11 +82,11 @@ const levels = [
       options: [
         { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
         { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
-        { text: "Habibie", image: "Assets/Images/habibie.jpg" },
-        { text: "Gus Dur", image: "Assets/Images/gus_dur.jpg" },
-        { text: "Megawati", image: "Assets/Images/megawati.jpg" },
+        { text: "Habibie", image: "Assets/Img/Habibie.jpeg" },
+        { text: "Gus Dur", image: "Assets/Img/Gusdur.jpeg" },
+        { text: "Megawati", image: "Assets/Img/Megawati.jpeg" },
         { text: "Jokowi", image: "Assets/Img/jokowi.jpeg" },
-        { text: "SBY", image: "Assets/Images/sby.jpg" }
+        { text: "SBY", image: "Assets/Img/SBY.jpeg" }
       ],
       answer: "Soekarno"
     },
@@ -95,10 +95,10 @@ const levels = [
       options: [
         { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
         { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
-        { text: "BJ Habibie", image: "Assets/Images/habibie.jpg" },
-        { text: "Abdurrahman Wahid (Gus Dur)", image: "Assets/Images/gus_dur.jpg" },
-        { text: "Megawati Soekarnoputri", image: "Assets/Images/megawati.jpg" },
-        { text: "Susilo Bambang Yudhoyono (SBY)", image: "Assets/Images/sby.jpg" },
+        { text: "BJ Habibie", image: "Assets/Img/Habibie.jpeg" },
+        { text: "Abdurrahman Wahid (Gus Dur)", image: "Assets/Img/Gusdur.jpeg" },
+        { text: "Megawati Soekarnoputri", image: "Assets/Img/Megawati.jpeg" },
+        { text: "Susilo Bambang Yudhoyono (SBY)", image: "Assets/Img/SBY.jpeg" },
         { text: "Joko Widodo (Jokowi)", image: "Assets/Img/jokowi.jpeg" }
       ],
       answer: "BJ Habibie"
@@ -110,28 +110,28 @@ const levels = [
     {
       question: "Apa nama kerajaan Islam pertama di Indonesia?",
       options: [
-        { text: "Demak", image: "Assets/Images/demak.jpg" },
-        { text: "Mataram", image: "Assets/Images/mataram.jpg" },
-        { text: "Majapahit", image: "Assets/Images/majapahit.jpg" },
-        { text: "Sriwijaya", image: "Assets/Images/sriwijaya.jpg" },
-        { text: "Aceh", image: "Assets/Images/aceh.jpg" },
-        { text: "Banten", image: "Assets/Images/banten.jpg" },
-        { text: "Cirebon", image: "Assets/Images/cirebon.jpg" },
-        { text: "Malaka", image: "Assets/Images/malaka.jpg" }
+        { text: "Demak", image: "Assets/Img/Demak.jpeg" },
+        { text: "Mataram", image: "Assets/Img/Mataram.jpeg" },
+        { text: "Majapahit", image: "Assets/Img/Majapahit.jpeg" },
+        { text: "Sriwijaya", image: "Assets/Img/Sriwijaya.jpeg" },
+        { text: "Aceh", image: "Assets/Img/Aceh.jpeg" },
+        { text: "Banten", image: "Assets/Img/Banten.jpeg" },
+        { text: "Cirebon", image: "Assets/Img/Cirbon.jpeg" },
+        { text: "Malaka", image: "Assets/Img/Malaka.jpeg" }
       ],
       answer: "Demak"
     },
     {
       question: "Siapa pendiri Kerajaan Majapahit?",
       options: [
-        { text: "Hayam Wuruk", image: "Assets/Images/hayam_wuruk.jpg" },
-        { text: "Gajah Mada", image: "Assets/Images/gajah_mada.jpg" },
-        { text: "Raden Wijaya", image: "Assets/Images/raden_wijaya.jpg" },
-        { text: "Brawijaya", image: "Assets/Images/brawijaya.jpg" },
-        { text: "Kertanegara", image: "Assets/Images/kertanegara.jpg" },
-        { text: "Jayanegara", image: "Assets/Images/jayanegara.jpg" },
-        { text: "Suhita", image: "Assets/Images/suhita.jpg" },
-        { text: "Rajasa", image: "Assets/Images/rajasa.jpg" }
+        { text: "Hayam Wuruk", image: "Assets/Img/Hayam Wuruk.jpeg" },
+        { text: "Gajah Mada", image: "Assets/Img/Gajah Mada.jpeg" },
+        { text: "Raden Wijaya", image: "Assets/Img/Raden Wijaya.jpeg" },
+        { text: "Brawijaya", image: "Assets/Img/Brawijaya.jpg" },
+        { text: "Kertanegara", image: "Assets/Img/Kartanegara.jpeg" },
+        { text: "Jayanegara", image: "Assets/Img/Jayanegara.jpeg" },
+        { text: "Suhita", image: "Assets/Img/Suhita.jpeg" },
+        { text: "Rajasa", image: "Assets/Img/Rajasa.jpeg" }
       ],
       answer: "Raden Wijaya"
     }
@@ -141,15 +141,15 @@ const levels = [
     {
       question: "Siapakah pahlawan nasional wanita yang berasal dari Aceh?",
       options: [
-        { text: "R.A. Kartini", image: "Assets/Images/ra_kartini.jpg" },
-        { text: "Cut Nyak Dien", image: "Assets/Images/cut_nyak_dien.jpg" },
-        { text: "Martha Christina Tiahahu", image: "Assets/Images/martha_christina_tiahahu.jpg" },
-        { text: "Dewi Sartika", image: "Assets/Images/dewi_sartika.jpg" },
-        { text: "Nyi Ageng Serang", image: "Assets/Images/nyi_ageng_serang.jpg" },
-        { text: "Tjut Meutia", image: "Assets/Images/tjut_meutia.jpg" },
-        { text: "Fatmawati", image: "Assets/Images/fatmawati.jpg" },
-        { text: "Maria Walanda Maramis", image: "Assets/Images/maria_walanda_maramis.jpg" },
-        { text: "Siti Hartinah", image: "Assets/Images/siti_hartinah.jpg" }
+        { text: "R.A. Kartini", image: "Assets/Img/Kartini.jpeg" },
+        { text: "Cut Nyak Dien", image: "Assets/Img/Cut Nyak Dien.jpeg" },
+        { text: "Martha Christina Tiahahu", image: "Assets/Img/Martha.jpeg" },
+        { text: "Dewi Sartika", image: "Assets/Img/Sartika.jpeg" },
+        { text: "Nyi Ageng Serang", image: "Assets/Img/Nyi Ageng Serang.jpeg" },
+        { text: "Tjut Meutia", image: "Assets/Img/Tjut Meutia.jpeg" },
+        { text: "Fatmawati", image: "Assets/Img/Fatmawati.jpeg" },
+        { text: "Maria Walanda Maramis", image: "Assets/Img/Maria Welanda Maramis.jpeg" },
+        { text: "Siti Hartinah", image: "Assets/Img/Siti Hartinah.jpeg" }
       ],
       answer: "Cut Nyak Dien"
     },
@@ -157,14 +157,14 @@ const levels = [
       question: "Siapakah yang dikenal sebagai Bapak Pendidikan Nasional?",
       options: [
         { text: "Soekarno", image: "Assets/Img/soekarno.jpg" },
-        { text: "Ki Hajar Dewantara", image: "Assets/Images/ki_hajar_dewantara.jpg" },
-        { text: "Sudirman", image: "Assets/Images/sudirman.jpg" },
+        { text: "Ki Hajar Dewantara", image: "Assets/Img/Ki Hajar Dewantara.jpeg" },
+        { text: "Sudirman", image: "Assets/Img/Sudirman.jpeg" },
         { text: "Soeharto", image: "Assets/Img/soeharto.jpeg" },
         { text: "Hatta", image: "Assets/Img/hatta.jpg" },
-        { text: "Bung Tomo", image: "Assets/Images/bung_tomo.jpg" },
-        { text: "Mohammad Yamin", image: "Assets/Images/mohammad_yamin.jpg" },
-        { text: "Pattimura", image: "Assets/Images/pattimura.jpg" },
-        { text: "Djuanda Kartawidjaja", image: "Assets/Images/djuanda_kartawidjaja.jpg" }
+        { text: "Bung Tomo", image: "Assets/Img/Bung Tomo.jpeg" },
+        { text: "Mohammad Yamin", image: "Assets/Img/Moh Yamin.jpeg" },
+        { text: "Pattimura", image: "Assets/Img/Pattimura.jpeg" },
+        { text: "Djuanda Kartawidjaja", image: "Assets/Img/Djuanda Kartawidjaja.jpeg" }
       ],
       answer: "Ki Hajar Dewantara"
     }

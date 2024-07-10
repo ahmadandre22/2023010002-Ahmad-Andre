@@ -1,5 +1,5 @@
 const hari = {
-    "libur": "Libur Kuliah Sabtu Dan Minggu",
+    libur: "Libur Kuliah Sabtu Dan Minggu",
     "masuk": "Masuk Kuliah Senin Sampai Jumat",
     "lainnya": {
       "senin": "Senin Hari ini Cerah",
