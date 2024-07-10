@@ -121,27 +121,32 @@ function showResult() {
 // Timer
 let timerInterval;
 function startTimer() {
-    timer = 60; // Reset timer to 60 seconds
+    timer = 120; // Reset timer to 120 seconds
     timerDisplay.textContent = timer;
     timerInterval = setInterval(() => {
         timer--;
         timerDisplay.textContent = timer;
         if (timer <= 0) {
-            alert("Waktu habis!");
             clearInterval(timerInterval);
-            currentQuestionIndex++;
-            if (currentQuestionIndex < levels[currentLevel].length) {
-                displayQuestion(levels[currentLevel][currentQuestionIndex]);
-                resetTimer(); // Reset timer for the next question
-            } else {
-                if (currentLevel < totalLevels - 1) {
-                    showNextButton();
-                } else {
-                    showResult(); // Show final result if all questions are answered
-                }
-            }
+            handleTimeUp();
         }
     }, 1000);
+}
+
+function handleTimeUp() {
+    alert("Waktu habis!");
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < levels[currentLevel].length) {
+        displayQuestion(levels[currentLevel][currentQuestionIndex]);
+        resetTimer(); // Reset timer for the next question
+    } else {
+        if (currentLevel < totalLevels - 1) {
+            nextButton.style.display = "block";
+        } else {
+            showResult(); // Show final result if all questions are answered
+        }
+    }
 }
 
 function resetTimer() {
@@ -156,3 +161,24 @@ function stopTimer() {
 startGameButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", nextLevel);
 resetButton.addEventListener("click", resetGame);
+
+function resetGame() {
+    // Reset all game-related variables and UI elements
+    playerName = "";
+    currentLevel = 0;
+    currentQuestionIndex = 0;
+    correctAnswers = 0;
+    score = 0;
+    levelScores = new Array(totalLevels).fill(0);
+    
+    playerNameDisplay.textContent = "";
+    scoreDisplay.textContent = score;
+    levelDisplay.textContent = "";
+    timerDisplay.textContent = "";
+    
+    document.querySelector(".player-info").style.display = "block";
+    contentSection.style.display = "none";
+    nextButton.style.display = "none";
+    resultDisplay.style.display = "none";
+    playerNameInput.value = "";
+}
