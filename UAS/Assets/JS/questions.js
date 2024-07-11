@@ -66,11 +66,11 @@ const levels = [
       question: "Apa nama bendera perjuangan Indonesia yang digunakan pada masa pergerakan nasional?",
       options: [
         { text: "Merah Putih", image: "Assets/Img/Merah Putih.jpeg" },
-        { text: "Bintang Kejora", image: "Assets/Img/Bintang Kejora.jpeg" },
-        { text: "Bendera Pusaka", image: "Assets/Img/bendera_pusaka.jpg" },
-        { text: "Dwiwarna", image: "Assets/Img/dwiwarna.jpg" },
-        { text: "Garuda", image: "Assets/Img/Garuda.png" },
-        { text: "Sang Saka Merah Putih", image: "Assets/Img/sang_saka_merah_putih.jpg" }
+        { text: "Bintang Kejora", image: "Assets/Img/Bintang Kejora.jpg" },
+        { text: "Bendera Merah", image: "Assets/Img/Merah.jpeg" },
+        { text: "Bendera Kuning", image: "Assets/Img/Kuning.jpeg" },
+        { text: "Bendera Garuda", image: "Assets/Img/Garuda.png" },
+        { text: "Bendera Belanda", image: "Assets/Img/Belanda.jpeg" }
       ],
       answer: "Merah Putih"
     }
