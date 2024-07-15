@@ -32,6 +32,16 @@ header {
     animation: slideInDown 1s forwards;
 }
 
+.left-logos,
+.right-logo {
+    display: flex;
+    align-items: center;
+}
+
+.left-logos img {
+    margin-right: 10px; /* Add margin to separate logos */
+}
+
 @keyframes slideInDown {
     from {
         transform: translateY(-100%);
@@ -64,7 +74,11 @@ header {
     border-radius: 50%;
 }
 
-.rotating-logo,
+/* Remove rotating animation from logos */
+.rotating-logo {
+    /* animation: rotate 5s linear infinite; */
+}
+
 .rotating-image {
     animation: rotate 5s linear infinite;
 }

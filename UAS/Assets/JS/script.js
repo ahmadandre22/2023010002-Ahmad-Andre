@@ -42,6 +42,7 @@ function loadLevel(level) {
         scoreDisplay.textContent = score;
         displayQuestion(levelQuestions[currentQuestionIndex]);
         startTimer(); // Start timer at the beginning of each level
+        nextButton.style.display = "none"; // Hide "Next Level" button at the start of each level
     } else {
         showResult(); // Player wins if all levels are completed
     }
