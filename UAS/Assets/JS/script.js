@@ -117,6 +117,13 @@ function showResult() {
     );
 
     stopTimer(); // Stop timer when the game is over
+    disableGameControls(); // Disable game controls when the game is over
+}
+
+function disableGameControls() {
+    nextButton.style.display = "none"; // Hide "Next Level" button
+    resetButton.style.display = "block"; // Show "Play Again" button
+    resetButton.disabled = false; // Enable "Play Again" button
 }
 
 // Timer
@@ -143,7 +150,7 @@ function handleTimeUp() {
         resetTimer(); // Reset timer for the next question
     } else {
         if (currentLevel < totalLevels - 1) {
-            nextButton.style.display = "block";
+            showNextButton();
         } else {
             showResult(); // Show final result if all questions are answered
         }
@@ -182,4 +189,6 @@ function resetGame() {
     nextButton.style.display = "none";
     resultDisplay.style.display = "none";
     playerNameInput.value = "";
+    resetButton.style.display = "none"; // Hide "Play Again" button initially
+    resetButton.disabled = true; // Disable "Play Again" button initially
 }
