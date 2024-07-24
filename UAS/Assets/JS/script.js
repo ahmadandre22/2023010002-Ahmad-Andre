@@ -17,7 +17,7 @@ let totalLevels = levels.length;
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let score = 0;
-let timer = 60; // Default time for each question (seconds)
+let timer = 120; // Default time for each question (seconds)
 
 let levelScores = []; // Array to store scores for each level
 
